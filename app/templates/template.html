@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Analytica</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- fevicon -->
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css') }}">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.min.css') }}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header-top">
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="static/images/logo.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu ">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="index.html">Home</a> </li>
+                                            <li> <a href="template1.html">Decriptive Analysis</a> </li>
+                                            <li> <a href="/dash">Dashboards</a> </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end header inner -->
+        <!-- end header -->
+        <section class="slider_section">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>Obese Population Prediction</h1>
+                                            <p>
+                                                Predict the probability of Obese population in a state
+                                                <br>
+                                            </p>
+                                            <form action='/predictobese' method="POST" class="Vegetable">
+                                                <input class="Vegetable_fom" placeholder="Total number of restaurants" type="text" name=" Restaurants"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Total number of gym" type="text" name=" Gym"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Direct sales farms" type="text" name=" DIRSALES FARMS"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Fresh vegetables farms" type="text" name=" FRESHVEG FARMS"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Food insecurity population" type="text" name=" FOOD INSEC population"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Population state" type="text" name="population">
+                                                <br><br><button align="center"  type="submit" class="Search_btn">Predict</button>
+                                            </form>
+
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/obese.png"></figure>
+                                            <br><br> <br><br> <h1> {{pred}} <br></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>Unauthorized Stores to AP Prediction</h1>
+                                            <p>
+                                                Predict the probability of Unauthorized Stores to Assistance Program in a state
+                                                <br>
+                                            </p>
+                                            <form action='/predictstore' method="POST" class="Vegetable">
+                                                <input class="Vegetable_fom" placeholder="Assistanceprogram population" type="text" name=" AP_Population"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Total number of stores" type="text" name="Total_Stores"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Food insecurity population" type="text" name="FOOD_INSECURITY"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Lowaccess population" type="text" name="LOWACCESS_POP"><br>
+                                                <br><input class="Vegetable_fom" placeholder="State population" type="text" name=" Population_State"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Total number of food banks" type="text" name=" FOOD_BANKS">
+                                                <br><br><button align="center" type="submit" class="Search_btn">Predict</button>
+
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/store1.png"></figure>
+                                            <br><br> <br><br> <h1 class="justifier"> {{pred3}} <br></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>SNAP Benefit prediction</h1>
+                                            <p>
+                                                Predict the amount of household SNAP benefit
+                                                <br>
+                                            </p>
+                                            <form action='/predictsnap' method="POST" class="Vegetable">
+                                                <input class="Vegetable_fom" placeholder="Household size people" type="text" name=" Household_size__people"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="% of Household income/poverty Rate" type="text" name=" income_as_a_percentage_of_poverty"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Household income per month" type="text" name=" household_income__dollars_month"><br>
+                                                <br><input class="Vegetable_fom" placeholder="SNAP certification period month" type="text" name=" SNAP_certification_period__months"><br>
+                                                <br><br><button align="center" type="submit" class="Search_btn">Predict</button>
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/snap.png"></figure>
+                                            <br><br> <br><br> <h1 class="justifier"> {{pred2}} <br></h1>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>Total Gym Prediction</h1>
+                                            <p>
+                                                Predict the Total number of fitness facilities in a state
+                                                <br>
+                                            </p>
+                                            <form action='/predictgym' method="POST" class="Vegetable">
+                                                <input class="Vegetable_fom" placeholder="Total number of restaurants" type="text" name=" Restaurants"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Obese population" type="text" name=" Obese"><br>
+                                                <br> <input class="Vegetable_fom" placeholder="Direct sales farms" type="text" name=" DIRSALES FARMS"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Fresh vegetables farms" type="text" name=" FRESHVEG FARMS"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Lowaccess population" type="text" name=" LOWACCESS POPulation"><br>
+                                                <br><input class="Vegetable_fom" placeholder="Food insecurity population" type="text" name=" FOOD INSEC population">
+                                                <br><br><button align="center" type="submit" class="Search_btn">Predict</button>
+
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/gym.png"></figure>
+                                            <br><br> <br><br> <h1 class="justifier"> {{pred1}} <br></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </section>
+        </div>
+    </header>
+
+
+
+    <!--  footer -->
+    <footr>
+        <div class="footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="logo_footer"> <img src="static/images/logo2.png" alt="#" /></a>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Address </h3>
+                                    <ul class="loca">
+                                        <li>
+                                            <a href="#"></a>
+                                            Les Berges du Lac II, 1053, TN
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>+216 54 947 572
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>analyticaesprit@gmail.com
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>Social Link</h3>
+                                    <ul class="Menu_footer">
+                                        <li ><a href="https://www.facebook.com/Analytica-102853252417844" ><i class="fa fa-facebook-square fa-lg"></i> Facebook</a> </li>
+                                        <li ><a href="https://www.instagram.com/analytica_business/" ><i style="font-size:24px" class="fa">&#xf16d;</i> Instagram </a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Newsletter</h3>
+                                    <form class="news">
+                                        <input class="newslatter" placeholder="Enter your email" type="text" name=" Enter your email">
+                                        <button class="submit">Subscribe</button>
+                                    </form><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/jquery-3.0.0.min.js"></script>
+    <script src="static/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <script>
+        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+        // Australia.
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+            });
+
+            var image = 'images/maps-and-flags.png';
+            var beachMarker = new google.maps.Marker({
+                position: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+    <!-- end google map js -->
+
+
+
+</body>
+
+</html>

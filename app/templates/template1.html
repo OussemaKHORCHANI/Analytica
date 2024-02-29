@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Analytica</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- fevicon -->
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css') }}">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.min.css') }}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header-top">
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="static/images/logo.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu ">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="index.html">Home</a> </li>
+                                            <li> <a href="/app/static">Predictive Analysis</a> </li>
+                                            <li> <a href="/dash">Dashboards</a> </li>
+                                            
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end header inner -->
+        <!-- end header -->
+        <section class="slider_section">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <span>Welcome To Analytica</span>
+                                            <h1>State Profiling By Hygiene</h1>
+                                            <p class="justifier">
+                                                We used PCA (Principal Component Analysis) algorithm to analyze the correlation between the different states (individuals), the different hygiene variables and between individuals, variables. Here are some observations from our graph :<br><br>
+                                                • California State is positively correlated with the variables Obese Population, Total Number of Restaurants, Food Insecurity Population and Low Access Population.<br><br>
+                                                • North Carolina State, Ohio State, NewYork State are positively correlated with the Total Number of Gym.<br><br>
+                                                • We can say that the variables Total Number of Gym, Diabete Population, Resto sales Per Capita, Direct sales Farms and FreshVegetables Farms are positively correlated with each other.
+                                                <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/acp.png"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>State Profiling By Food Access</h1>
+                                            <p class="justifier">
+                                                We used PCA (Principal Component Analysis) algorithm to analyze the correlation between the different states (individuals), the different food access variables and between individuals, variables. Here are some observations from our graph :<br><br>
+                                                • Georgia State and Missouri State are positively correlated with the variables Poverty Rate, Benefit Assistance Program per Capita and Redemptions Assistance Program per Store.<br><br>
+                                                • the variables Poverty Rate, Benefit Assistance Program per Capita and Redemptions Assistance Program per Store are orthogonally correlated with all the other variables which are positively correlated with each other.
+                                                <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div>
+                                            <figure><img src="static/images/acp1.png"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+
+                        <div class="container-fluid padding_dd">
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="text-bg">
+                                            <h1>State Segmentation</h1>
+                                            <p class="justifier">
+                                                We used the HAC (hierarchical cluster analysis) algorithm to segment the states into 4 major groups while keeping the states closest to them in the same group. Using the ward.D2 distance as a metric we visualized the dendrogram cluster to get an idea of ​​the states that have the same behavior.
+                                                <br><br><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <div class="images_box">
+                                            <figure><img src="static/images/cah.png"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+
+        </section>
+        </div>
+    </header>
+
+
+    <!--  footer -->
+    <footr>
+        <div class="footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="logo_footer"> <img src="static/images/logo2.png" alt="#" /></a>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Address </h3>
+                                    <ul class="loca">
+                                        <li>
+                                            <a href="#"></a>
+                                            Les Berges du Lac II, 1053, TN
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>+216 54 947 572
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>analyticaesprit@gmail.com
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>Social Link</h3>
+                                    <ul class="Menu_footer">
+                                        <li><a href="https://www.facebook.com/Analytica-102853252417844"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a> </li>
+                                        <li><a href="https://www.instagram.com/analytica_business/"><i style="font-size:24px" class="fa">&#xf16d;</i> Instagram</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Newsletter</h3>
+                                    <form class="news">
+                                        <input class="newslatter" placeholder="Enter your email" type="text" name=" Enter your email">
+                                        <button class="submit">Subscribe</button>
+                                    </form><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/jquery-3.0.0.min.js"></script>
+    <script src="static/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <script>
+        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+        // Australia.
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+            });
+
+            var image = 'images/maps-and-flags.png';
+            var beachMarker = new google.maps.Marker({
+                position: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+    <!-- end google map js -->
+
+
+
+</body>
+
+</html>

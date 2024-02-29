@@ -1,0 +1,7 @@
+# Mail configuration
+MAIL_SERVER = 'smtp.gmail.com'
+MAIL_PORT = 465
+MAIL_USERNAME = 'analyticaesprit@gmail.com'
+MAIL_PASSWORD = 'analyticaesprit22'
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
